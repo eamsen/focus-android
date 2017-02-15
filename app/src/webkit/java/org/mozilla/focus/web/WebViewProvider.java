@@ -14,6 +14,7 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
+import org.mozilla.focus.webkit.NestedWebView;
 import org.mozilla.focus.webkit.TrackingProtectionWebViewClient;
 
 /**
@@ -45,7 +46,7 @@ public class WebViewProvider {
         settings.setDisplayZoomControls(false);
     }
 
-    private static class WebkitView extends WebView implements IWebView {
+    private static class WebkitView extends NestedWebView implements IWebView {
         private Callback callback;
         private TrackingProtectionWebViewClient client;
 
