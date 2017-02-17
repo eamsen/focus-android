@@ -10,7 +10,14 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
     }
+
+    dexOptions {
+        preDexLibraries true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
